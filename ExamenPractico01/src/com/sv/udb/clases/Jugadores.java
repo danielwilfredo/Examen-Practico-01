@@ -14,11 +14,12 @@ import java.util.ArrayList;
  */
 public class Jugadores {
     
-    String nombJuga;
-    int edad;
-    double altu;
-    double peso; 
+     private String nombJuga;
+    private int edad;
+    private double altu;
+    private double peso; 
 
+  
     public String getNombJuga() {
         return nombJuga;
     }
@@ -51,6 +52,7 @@ public class Jugadores {
         this.peso = peso;
     }
 
+   
        
     
     public ArrayList jugaTodo()
@@ -74,9 +76,12 @@ public class Jugadores {
     public ArrayList nombre()
     {
          ArrayList<String> nombre = new ArrayList<String>();
-         String nomb = getNombJuga();
+        nombJuga = getNombJuga();
                             
-          nombre.add(nomb);
+          nombre.add(nombJuga);
+          for(int x=0;x<nombre.size();x++) {
+  System.out.println(nombre.get(x));
+                         }
         return nombre;
     }
     
@@ -86,6 +91,9 @@ public class Jugadores {
         
              String edad = Integer.toString(getEdad());
               edad2.add(edad);
+              for(int x=0;x<edad2.size();x++) {
+  System.out.println(edad2.get(x));
+                         }
           return edad2;
           
     }
@@ -95,22 +103,29 @@ public class Jugadores {
         
              String alt = Integer.toString(getEdad());
               edad2.add(alt);
+                         for(int x=0;x<edad2.size();x++) {
+  System.out.println(edad2.get(x));
+                         }
           return edad2;
           
     }
-         public ArrayList peso()
+       
+        public ArrayList peso()
     {
          ArrayList<String> edad2 = new ArrayList<String>();
         
-             String peso = Double.toString(getEdad());
-              edad2.add(peso);
+             String alt = Double.toString(getPeso());
+                         edad2.add(alt);
+                         for(int x=0;x<edad2.size();x++) {
+                             
+  System.out.println(edad2.get(x));
+                         }
           return edad2;
           
     }
-    
-    
    
-    
-    
-    
 }
+    
+    
+    
+

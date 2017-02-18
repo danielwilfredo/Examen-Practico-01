@@ -6,6 +6,8 @@
 package com.sv.udb.forms;
 
 import com.sv.udb.clases.Jugadores;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -48,25 +50,29 @@ public class Frmjugadores extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Registro de jugadores"));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Nombre:");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Edad:");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Altura:");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Peso:");
 
         txtnombre.setBackground(new java.awt.Color(204, 204, 204));
-        txtnombre.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        txtnombre.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
 
         txtaltura.setBackground(new java.awt.Color(204, 204, 204));
-        txtaltura.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        txtaltura.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
 
         txtpeso.setBackground(new java.awt.Color(204, 204, 204));
-        txtpeso.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        txtpeso.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
 
         txtedad.setBackground(new java.awt.Color(204, 204, 204));
-        txtedad.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        txtedad.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
 
         btnregistrar.setBackground(new java.awt.Color(153, 153, 153));
         btnregistrar.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
@@ -89,8 +95,21 @@ public class Frmjugadores extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(btnregistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1)
+                                .addGap(119, 119, 119))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(txtpeso)
+                                .addContainerGap())))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -100,17 +119,8 @@ public class Frmjugadores extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtaltura)
                             .addComponent(txtedad)
-                            .addComponent(txtnombre)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtpeso, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnregistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton1)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtnombre))
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,6 +176,10 @@ public class Frmjugadores extends javax.swing.JFrame {
      double peso = Double.parseDouble(txtpeso.getText());
      juga.setPeso(peso);
      
+     
+     
+   
+     
     }//GEN-LAST:event_btnregistrarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -174,7 +188,10 @@ nombObt = String.valueOf(juga.nombre());
 altuObt = String.valueOf(juga.altura());
 pesoObt = String.valueOf(juga.peso());
 edadObt = String.valueOf(juga.edad());
-System.out.println(nombObt +" " + altuObt +" " + pesoObt +" " + edadObt);
+JOptionPane.showMessageDialog(this, juga.jugaTodo());
+//System.out.println(juga.jugaTodo());
+//JOptionPane.showMessageDialog(this, nombObt +" " + altuObt +" " + pesoObt +" " + edadObt);
+
 
 
             // TODO add your handling code here:
