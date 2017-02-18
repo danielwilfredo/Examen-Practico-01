@@ -53,7 +53,7 @@ public class Jugadores {
 
        
     
-    public ArrayList juga()
+    public ArrayList jugaTodo()
     {
         ArrayList<String> nombre = new ArrayList<String>();
          String nomb = getNombJuga();
@@ -71,6 +71,44 @@ public class Jugadores {
 }         
           return nombre;
     }
+    public ArrayList nombre()
+    {
+         ArrayList<String> nombre = new ArrayList<String>();
+         String nomb = getNombJuga();
+                            
+          nombre.add(nomb);
+        return nombre;
+    }
+    
+     public ArrayList edad()
+    {
+         ArrayList<String> edad2 = new ArrayList<String>();
+        
+             String edad = Integer.toString(getEdad());
+              edad2.add(edad);
+          return edad2;
+          
+    }
+       public ArrayList altura()
+    {
+         ArrayList<String> edad2 = new ArrayList<String>();
+        
+             String alt = Integer.toString(getEdad());
+              edad2.add(alt);
+          return edad2;
+          
+    }
+         public ArrayList peso()
+    {
+         ArrayList<String> edad2 = new ArrayList<String>();
+        
+             String peso = Double.toString(getEdad());
+              edad2.add(peso);
+          return edad2;
+          
+    }
+    
+    
    
     
     

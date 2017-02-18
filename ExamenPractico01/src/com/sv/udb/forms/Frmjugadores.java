@@ -150,8 +150,8 @@ public class Frmjugadores extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -169,8 +169,13 @@ public class Frmjugadores extends javax.swing.JFrame {
     }//GEN-LAST:event_btnregistrarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+String nombObt, altuObt, pesoObt, edadObt;
+nombObt = String.valueOf(juga.nombre());
+altuObt = String.valueOf(juga.altura());
+pesoObt = String.valueOf(juga.peso());
+edadObt = String.valueOf(juga.edad());
+System.out.println(nombObt +" " + altuObt +" " + pesoObt +" " + edadObt);
 
-System.out.println(juga.juga());
 
             // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
